@@ -1,0 +1,45 @@
+Microsoft Windows [Version 10.0.26200.9168]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\goruk>nmap --version
+Nmap version 7.99 ( https://nmap.org )
+Platform: i686-pc-windows-windows
+Compiled with: nmap-liblua-5.4.8 openssl-3.0.16 nmap-libssh2-1.11.1 nmap-libz-1.3.2 nmap-libpcre2-10.47 Npcap-1.88 nmap-libdnet-1.18.0 ipv6
+Compiled without:
+Available nsock engines: iocp poll select
+
+C:\Users\goruk>nmap localhost
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-24 18:45 +0100
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00057s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 996 closed tcp ports (reset)
+PORT    STATE SERVICE
+135/tcp open  msrpc
+445/tcp open  microsoft-ds
+902/tcp open  iss-realsecure
+912/tcp open  apex-mesh
+
+Nmap done: 1 IP address (1 host up) scanned in 0.27 seconds
+
+C:\Users\goruk>nmap -sV localhost
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-08-24 18:46 +0100
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 996 closed tcp ports (reset)
+PORT    STATE SERVICE         VERSION
+135/tcp open  msrpc           Microsoft Windows RPC
+445/tcp open  microsoft-ds?
+902/tcp open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+912/tcp open  vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.35 seconds
+
+C:\Users\goruk>
+
+
+
+
